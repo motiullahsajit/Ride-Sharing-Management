@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rating and Feedback</title>
-    <script src="js/script.js"></script>
+    <script src="js/ratingfeedbackvalidation.js"></script>
 </head>
 <body>
 
@@ -17,12 +17,12 @@
     <form action="ratingfeedback.php" method="post" novalidate onsubmit="return validation()">
         <label for="rating">Rating (1-5):</label>
         <input type="number" id="rating" name="rating" min="1" max="5" required>
-
+        <p id="ratingError"></p>
         <br>
 
         <label for="feedback">Feedback:</label>
         <textarea id="feedback" name="feedback" rows="4" required></textarea>
-
+        <p id="feedbackError"></p>
         <br>
 
         <input type="submit" value="Submit">

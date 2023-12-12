@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver Support</title>
+    <script src="js/driversupport.js"></script>
 </head>
 <body>
 
     <h1>Driver Support</h1>
 
-    <form action="#" method="post" enctype="application/x-www-form-urlencoded"        autocomplete="off" novalidate>
+    <form action="#" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate onsubmit="return validation()">
         <label for="issueType">Issue Type:</label>
-        <input type="text" name="issue" value="">
-            
-        
+        <input type="text" name="issue" id="issue" value="">
+        <p id="issueError"></p>
 
         <br>
 
         <label for="description">Description:</label>
         <textarea id="description" name="description" rows="4" required></textarea>
+        <p id="descriptionError"></p>
 
         <br>
 
@@ -28,6 +29,7 @@
 
 </body>
 </html>
+
 
 <?php
     require_once('supportDB.php');

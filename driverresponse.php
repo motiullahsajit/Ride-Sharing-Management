@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Requests</title>
+    <script src="js/driverresponse.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
             {?>
             
 
-    <form action="#" method="post" enctype="application/x-www-form-urlencoded"    autocomplete="off" novalidate>
+    <form action="#" method="post" enctype="application/x-www-form-urlencoded"    autocomplete="off" novalidate onsubmit="return validation()">
         <label for="requester">Requester Name:</label>
         <input type="text" id="requester" name="requester" value="<?=$entries[$i]['requester']?>" >
 
@@ -47,6 +48,8 @@
         <input type="radio" id="accept" name="status" value="accept"> Accept Request
         
         <input type="radio" id="decline" name="status" value="decline"> Decline Request
+        <br>
+        <p id="statusError"></p>
         </fieldset>
         
         
