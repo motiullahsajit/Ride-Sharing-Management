@@ -15,17 +15,35 @@ if (isset($_SESSION['last_activity_time'])) {
 $_SESSION['last_activity_time'] = time();
 ?>
 
-<html>
-    <head>
-        <title>customer dashboard</title>
-    </head>
-    <body>
-        <h1>Welcome to Customer Dashboard</h1>
-        <a href="ratingfeedback.php">rating feedback</a><br>
-        <a href="riderequest.php">ride request</a><br>
-        
-       
-        <br><br><br><br><br><br>
-        <a href="logout.php">logout</a>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="css/customer_dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Customer Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="dashboard-links">
+            <a href="ratingfeedback.php">Rating Feedback</a>
+            <a href="riderequest.php">Ride Request</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <a href="logout.php">Logout</a>
+        </div>
+    </footer>
+</body>
+
 </html>

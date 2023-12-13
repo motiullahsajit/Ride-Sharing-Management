@@ -5,53 +5,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/loginvalidation.js"></script>
 </head>
-<header>
-    <center>
-        <h1>Ride Sharing Management - Driver Panel</h1>
-</center>
+<body>
 
-</header>
-<center>
+    <header>
+        <div class="container">
+            <h1>Ride Sharing Management - Driver Panel</h1>
+        </div>
+    </header>
 
-    <body>
+    <section class="login-section">
+        <div class="container">
+            <form action="loginCheck.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate onsubmit="return validation()">
+                <fieldset>
+                    <h3 class="login-text">Login</h3>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <p id="un"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <p id="pass"></p>
+                    </div>
+                </fieldset>
+                <input type="submit" name="submit" value="Login">
+            </form>
+            <div class="extra-links">
+                <a href="forgetpassword.php">Forgot your password?</a>
+                <p>Don't have an account? <a href="registration.php">Register here</a>.</p>
+            </div>
+        </div>
+    </section>
 
-        <form action="loginCheck.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate onsubmit="return validation()">
-            <fieldset>
-                <legend align='center'>Login</legend>
-                <table>
-                    <tr>
-                        <td>Username:</td>
-                        <td><input type="text" id="username" name="username"></td>
-                        <td><p id="un"></p></td>
-                    </tr>
-                    <tr>
-                    <td>Password:</td>
-                    <td><input type="password" id="password" name="password"></td>
-                    <td><p id="pass"></p></td>
-                    </tr>
-                </table>
+</body>
 
-                <br>
-                
-
-            </fieldset>
-            <br>
-
-            <input type="submit" name="submit" value="login" >
-            <br>
-            <br>
-
-
-        </form>
-        <a href="forgetpassword.php">forget password?</a>
-        <p>
-            Don't have an Account? <a href="registration.php">Click here</a> for Registration.
-        </p>
-
-    </body>
-</center>
 
 </html>
 

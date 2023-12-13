@@ -5,63 +5,71 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Requests</title>
+    <link rel="stylesheet" href="css/driverresponse.css">
     <script src="js/driverresponse.js"></script>
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            <h1>Ride Requests</h1>
+        </div>
+    </header>
 
-    <h1>Ride Requests</h1>
-    <?php for($i=0;$i<count($entries);$i++)
-            {?>
-            
+    <div class="content">
+        <?php for ($i = 0; $i < count($entries); $i++) { ?>
 
-    <form action="#" method="post" enctype="application/x-www-form-urlencoded"    autocomplete="off" novalidate onsubmit="return validation()">
-        <label for="requester">Requester Name:</label>
-        <input type="text" id="requester" name="requester" value="<?=$entries[$i]['requester']?>" >
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate onsubmit="return validation()">
+                <label for="requester">Requester Name:</label>
+                <input class="input-field" type="text" id="requester" name="requester" value="<?= $entries[$i]['requester'] ?>">
 
-        <br>
+                <br>
 
-        <label for="pickup">Pickup Location:</label>
-        <input type="text" id="pickup" name="pickup" value="<?=$entries[$i]['pickup_location']?>" >
+                <label for="pickup">Pickup Location:</label>
+                <input class="input-field" type="text" id="pickup" name="pickup" value="<?= $entries[$i]['pickup_location'] ?>">
 
-        <br>
+                <br>
 
-        <label for="destination">Destination:</label>
-        <input type="text" id="destination" name="destination" value="<?=$entries[$i]['destination']?>">
+                <label for="destination">Destination:</label>
+                <input class="input-field" type="text" id="destination" name="destination" value="<?= $entries[$i]['destination'] ?>">
 
-        <br>
+                <br>
 
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" value="<?=$entries[$i]['date']?>">
+                <label for="date">Date:</label>
+                <input class="input-field" type="date" id="date" name="date" value="<?= $entries[$i]['date'] ?>">
 
-        <br>
+                <br>
 
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" value="<?=$entries[$i]['time']?>">
+                <label for="time">Time:</label>
+                <input class="input-field" type="time" id="time" name="time" value="<?= $entries[$i]['time'] ?>">
 
-        <br>
-        <fieldset style="width: 300px;">
-        <legend>Response</legend>
-        <input type="radio" id="accept" name="status" value="accept"> Accept Request
-        
-        <input type="radio" id="decline" name="status" value="decline"> Decline Request
-        <br>
-        <p id="statusError"></p>
-        </fieldset>
-        
-        
-        <?php   }?>
-        <br>
+                <br>
+                <fieldset>
+                    <legend>Response</legend>
+                    <input type="radio" id="accept" name="status" value="accept"> Accept Request
 
-        <input type="submit" value="Submit">
-        <br><a href="driver_dashboard.php">go back</a>
-    </form>
+                    <input type="radio" id="decline" name="status" value="decline"> Decline Request
+                    <br>
+                    <p id="statusError"></p>
+                </fieldset>
+
+                <?php } ?>
+                <br>
+
+                <input class="input-field" type="submit" value="Submit">
+                <br><a href="driver_dashboard.php">Go Back</a>
+            </form>
+    </div>
 
 </body>
+
 </html>
+
 
 <?php
     

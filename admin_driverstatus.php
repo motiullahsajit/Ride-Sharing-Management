@@ -2,30 +2,41 @@
     require_once('statusDB.php');
     $stats=getstatus();
 ?>
-<html>
-    <head>
-        <title>View Driver Status</title>
-        
-    </head>
-    <body>
-        <h1>Driver Status</h1>
-        <table border='1' width=50%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Driver Status</title>
+    <link rel="stylesheet" href="css/admin_driverstatus.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Driver Status</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <table border='1' width=80%>
             <tr>
-                <th>sid</th>
-                <th>availability</th>
-                <th>reason</th>
+                <th>SID</th>
+                <th>Availability</th>
+                <th>Reason</th>
             </tr>
-            <?php for($i=0;$i<count($stats);$i++)
-                {?>
+            <?php for ($i = 0; $i < count($stats); $i++) { ?>
                 <tr>
-                    
-                    <td><?=$stats[$i]['sid']?></td>
-                    <td><?=$stats[$i]['availability']?></td>
-                    <td><?=$stats[$i]['reason']?></td>
-                    
-        <?php   }?>
+                    <td><?= $stats[$i]['sid'] ?></td>
+                    <td><?= $stats[$i]['availability'] ?></td>
+                    <td><?= $stats[$i]['reason'] ?></td>
                 </tr>
+            <?php } ?>
         </table>
-        <br><a href="admin_Dashboard.php">go back</a>
-    </body>
+        <br><a href="admin_Dashboard.php">Go Back</a>
+    </div>
+</body>
+
 </html>
+

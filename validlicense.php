@@ -25,37 +25,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle and License Verification</title>
+    <link rel="stylesheet" href="css/validlicense.css">
     <script src="js/licenseverification.js"></script>
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            <h1>Vehicle and License Verification</h1>
+        </div>
+    </header>
 
-    <h1>Vehicle and License Verification</h1>
+    <div class="content">
+        <form action="#" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate
+            onsubmit="return validation()">
+            <label for="vehicleModel">Vehicle Model:</label>
+            <input type="text" id="vehicleModel" name="vehicleModel" required> <span id='vm'></span>
 
-    <form action="#" method="post" enctype="application/x-www-form-urlencoded"         autocomplete="off" novalidate onsubmit="return validation()">
-        <label for="vehicleModel">Vehicle Model:</label>
-        <input type="text" id="vehicleModel" name="vehicleModel" required> <span id='vm'></span>
+            <br>
 
-        <br>
+            <label for="licensePlate">License Plate Number:</label>
+            <input type="text" id="licensePlate" name="licensePlate" required> <span id='lp'></span>
 
-        <label for="licensePlate">License Plate Number:</label>
-        <input type="text" id="licensePlate" name="licensePlate" required> <span id='lp'></span>
+            <br>
 
-        <br>
+            <label for="licenseNumber">Driver's License Number:</label>
+            <input type="text" id="licenseNumber" name="licenseNumber" required> <span id='ln'></span>
 
-        <label for="licenseNumber">Driver's License Number:</label>
-        <input type="text" id="licenseNumber" name="licenseNumber" required> <span id='ln'></span>
- 
-        <br>
+            <br>
 
-        <input type="submit" name="value" value="Submit"><br>
-        <a href="admin_Dashboard.php">go back</a>
-    </form>
-
+            <input type="submit" name="value" value="Submit"><br>
+            <a href="admin_Dashboard.php">Go Back</a>
+        </form>
+    </div>
 </body>
+
 </html>
+
 
 

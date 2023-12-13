@@ -2,30 +2,42 @@
     require_once('supportDB.php');
     $supports=getsupport();
 ?>
-<html>
-    <head>
-        <title>View Driver Status</title>
-        
-    </head>
-    <body>
-        <h1>Driver Status</h1>
-        <table border='1' width=50%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Driver Support</title>
+    <link rel="stylesheet" href="css/admin_driversupport.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Driver Support</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <table border='1' width=80%>
             <tr>
-                <th>did</th>
-                <th>issuetype</th>
-                <th>description</th>
+                <th>DID</th>
+                <th>Issue Type</th>
+                <th>Description</th>
             </tr>
-            <?php for($i=0;$i<count($supports);$i++)
-                {?>
+            <?php for ($i = 0; $i < count($supports); $i++) { ?>
                 <tr>
-                    
-                    <td><?=$supports[$i]['did']?></td>
-                    <td><?=$supports[$i]['issuetype']?></td>
-                    <td><?=$supports[$i]['description']?></td>
-                    
-        <?php   }?>
+                    <td><?= $supports[$i]['did'] ?></td>
+                    <td><?= $supports[$i]['issuetype'] ?></td>
+                    <td><?= $supports[$i]['description'] ?></td>
                 </tr>
+            <?php } ?>
         </table>
-        <br><a href="admin_Dashboard.php">go back</a>
-    </body>
+        <br><a href="admin_Dashboard.php">Go Back</a>
+    </div>
+</body>
+
 </html>
+
