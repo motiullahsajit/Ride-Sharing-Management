@@ -53,10 +53,15 @@ input[type="submit"]:hover {
 }
 
 a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
   text-decoration: none;
-  color: #333;
+  background-color: #555;
+  color: #fff;
+  border-radius: 4px;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: #333;
 }

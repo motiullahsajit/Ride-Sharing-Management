@@ -67,21 +67,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
         <form action="#" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate onsubmit="return validation()">
             <label for="vehicleModel">Vehicle Model:</label>
-            <input type="text" id="vehicleModel" name="vehicleModel" required> <span id='vm'></span>
+            <input class="input-filed" type="text" id="vehicleModel" name="vehicleModel" required> <span id='vm'></span>
 
             <br>
 
             <label for="licensePlate">License Plate Number:</label>
-            <input type="text" id="licensePlate" name="licensePlate" required> <span id='lp'></span>
+            <input class="input-filed" type="text" id="licensePlate" name="licensePlate" required> <span id='lp'></span>
 
             <br>
 
             <label for="licenseNumber">Driver's License Number:</label>
-            <input type="text" id="licenseNumber" name="licenseNumber" required> <span id='ln'></span>
+            <input class="input-filed" type="text" id="licenseNumber" name="licenseNumber" required> <span id='ln'></span>
 
             <br>
 
-            <input type="submit" name="submit" value="Verify">
+            <input class="submit-button"  type="submit" name="submit" value="Verify">
             <a href="driver_dashboard.php">Go Back</a>
         </form>
     </div>

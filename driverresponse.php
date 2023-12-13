@@ -61,8 +61,8 @@
                 <?php } ?>
                 <br>
 
-                <input class="input-field" type="submit" value="Submit">
-                <br><a href="driver_dashboard.php">Go Back</a>
+                <input class="submit-button" type="submit" value="Submit">
+                <a href="driver_dashboard.php">Go Back</a>
             </form>
     </div>
 

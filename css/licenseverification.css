@@ -37,7 +37,7 @@ label {
   margin: 10px 0;
 }
 
-input {
+.input-filed {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -77,4 +77,18 @@ a:hover {
 
 .success {
   color: #008000;
+}
+
+.submit-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #555;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.submit-button:hover {
+  background-color: #333;
 }

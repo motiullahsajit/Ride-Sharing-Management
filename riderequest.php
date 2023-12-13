@@ -24,23 +24,23 @@
         <form action="#" method="post" novalidate onsubmit="return validation()">
             <label for="requester">Requester Name:</label>
             <input type="text" id="requester" name="requester" required>
-            <p id="requesterError"></p>
+            <p class="error" id="requesterError"></p>
 
             <label for="pickup">Pickup Location:</label>
             <input type="text" id="pickup" name="pickup" required>
-            <p id="pickupError"></p>
+            <p class="error" id="pickupError"></p>
 
             <label for="destination">Destination:</label>
             <input type="text" id="destination" name="destination" required>
-            <p id="destinationError"></p>
+            <p class="error" id="destinationError"></p>
 
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
-            <p id="dateError"></p>
+            <p class="error" id="dateError"></p>
 
             <label for="time">Time:</label>
             <input type="time" id="time" name="time" required>
-            <p id="timeError"></p>
+            <p class="error" id="timeError"></p>
 
             <input type="submit" value="Submit">
         </form>

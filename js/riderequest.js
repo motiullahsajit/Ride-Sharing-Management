@@ -17,30 +17,34 @@ function validation() {
   dateError.innerHTML = "";
   timeError.innerHTML = "";
 
+  let error = 0;
+
   if (requester.trim() === "") {
     requesterError.innerHTML = "Please enter Requester Name.";
-    return false;
+    error++;
   }
 
   if (pickup.trim() === "") {
     pickupError.innerHTML = "Please enter Pickup Location.";
-    return false;
+    error++;
   }
 
   if (destination.trim() === "") {
     destinationError.innerHTML = "Please enter Destination.";
-    return false;
+    error++;
   }
 
   if (date.trim() === "") {
     dateError.innerHTML = "Please select a Date.";
-    return false;
+    error++;
   }
 
   if (time.trim() === "") {
     timeError.innerHTML = "Please select a Time.";
-    return false;
+    error++;
   }
+
+  if (error > 0) return false;
 
   return true;
 }
