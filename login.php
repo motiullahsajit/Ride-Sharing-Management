@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <script src="js/script.js"></script>
+    <script src="js/loginvalidation.js"></script>
 </head>
 <header>
     <center>
